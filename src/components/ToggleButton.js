@@ -11,7 +11,6 @@ function ToggleButton(props) {
             require: !status,
             test: "test abb"
         };
-        console.log('data', data);
         fetch("http://10.42.0.1:8080/toggle", {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},

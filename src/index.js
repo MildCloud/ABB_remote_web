@@ -12,6 +12,7 @@ import Home from "./routes/Home";
 import Documents from "./routes/Documents";
 import People from "./routes/People";
 import Navbar from "./components/Navbar";
+import {loader as monitorLoader} from "./components/Monitor";
 import "./index.css";
 
 const AppLayout = () => (
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: monitorLoader
       },
       {
         path: "documents",

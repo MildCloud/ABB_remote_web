@@ -1,4 +1,5 @@
 import React from "react";
+import Monitor from "../components/Monitor";
 import ToggleButton from "../components/ToggleButton"
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
                     mission
                 </div>
             </div>
+            <Monitor />
             <ToggleButton />
         </div>
     );
