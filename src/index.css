@@ -12,7 +12,6 @@
 .people {
   display: flex;
   height: 100vh;
-  /* align-items: center; */
   justify-content: center;
   font-size: 2rem;
   background-color: #fff;
@@ -20,23 +19,23 @@
 }
 
 .paragraph {
-    position: absolute;
-    left: 300px;
-    padding-top: 200px;
-    color: #151414;
-    font-size: 25px;
+  position: absolute;
+  left: 300px;
+  padding-top: 200px;
+  color: #151414;
+  font-size: 25px;
 }
 
 .paragraphContent {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #151414;
-    font-size: 25px;
-    width: 75vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #151414;
+  font-size: 25px;
+  width: 75vw;
 }
 
 .nav-menu {
-  background-color: #554b4b48;
+  background-color: #ffffff;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -44,6 +43,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  border-right: 1px solid #505050;
 }
 
 .nav-text {
@@ -57,7 +57,7 @@
 
 .nav-text a {
   text-decoration: none;
-  color: #151414;
+  color: #000000;
   font-size: 18px;
   width: 95%;
   height: 100%;
@@ -68,12 +68,11 @@
 }
 
 .nav-text a:hover {
-  background-color: #f74040;
-  color: #fff;
+  background-color: #fa5c5c;
 }
 
 .navActive {
-    background-color: #b30808;
+  background-color: #ff2323;
 }
 
 .nav-menu-items {
@@ -81,18 +80,37 @@
 }
 
 .logoImage {
-    margin-top: 50px;
-    margin-left: 25px;
-    margin-bottom: 50px;
-    width: 200px;
-    height: 150px;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 150px;
 }
 
 .sideBarFoot {
-    position: absolute;
-    left: 25px;
-    bottom: 20px;
-    width: 200px;
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+  width: 200px;
+}
+
+.titleWrapper {
+  position: absolute;
+  left: 40vw;
+}
+
+.toggleButton {
+  position: absolute;
+  left: 40vw;
+  bottom: 100px;
+  width: 300px;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff2323;
+  color: #000000;
 }
 
 span {
