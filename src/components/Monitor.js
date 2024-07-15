@@ -23,7 +23,7 @@ export async function loader({params}) {
     try{
         const mcu_url = "http://10.42.0.1:8080/monitor";
         const local_url = "http://localhost:8080/monitor";
-        const response = await fetch(local_url);
+        const response = await fetch(mcu_url);
         const resData = await response.json();
         return resData;
     } catch(err) {
