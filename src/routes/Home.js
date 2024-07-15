@@ -8,12 +8,12 @@ function Home() {
             <div className="titleWrapper">
                 <h1>Welcome</h1>
             </div>
-            <div className="paragraph">
+            {/* <div className="paragraph">
                 <h2>Mission</h2>
                 <div className="paragraphContent">
                     mission
                 </div>
-            </div>
+            </div> */}
             <Monitor />
             <ToggleButton />
         </div>

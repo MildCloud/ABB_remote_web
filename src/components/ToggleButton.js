@@ -11,7 +11,9 @@ function ToggleButton(props) {
             require: !status,
             test: "test abb"
         };
-        fetch("http://10.42.0.1:8080/toggle", {
+        const mcu_url = "http://10.42.0.1:8080/toggle";
+        const local_url = "http://localhost:8080/toggle";
+        fetch(local_url, {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(data)

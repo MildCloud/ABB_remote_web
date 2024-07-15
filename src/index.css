@@ -99,6 +99,25 @@
   left: 40vw;
 }
 
+.monitorTable {
+  position: absolute;
+  left: 40vw;
+  top: 20vh;
+  width: 20vw;
+  padding-top: 200px;
+  font-size: 25px;
+}
+
+.monitorName {
+  float: left;
+}
+
+.monitorData {
+  color: #000000;
+  padding-left: 30px;
+  float: left;
+}
+
 .toggleButton {
   position: absolute;
   left: 40vw;
