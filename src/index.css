@@ -109,13 +109,14 @@
 }
 
 .monitorName {
-  float: left;
+  /* float: left; */
+  padding-top: 20px;
 }
 
 .monitorData {
   color: #000000;
   padding-left: 30px;
-  float: left;
+  /* float: left; */
 }
 
 .toggleButton {
