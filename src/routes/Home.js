@@ -1,6 +1,7 @@
 import React from "react";
 import Monitor from "../components/Monitor";
 import ToggleButton from "../components/ToggleButton"
+import ToggleForm from "../components/ToggleForm";
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
                 </div>
             </div> */}
             <Monitor />
+            <ToggleForm />
             <ToggleButton />
         </div>
     );
