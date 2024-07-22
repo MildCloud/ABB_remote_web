@@ -13,17 +13,19 @@ function ToggleButton(props) {
         };
         const mcu_url = "http://10.42.0.1:8080/toggle";
         const local_url = "http://localhost:8080/toggle";
-        fetch(mcu_url, {
-                method: "POST",
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(data)
-        })
-        .then((response) => {
-            if (!response.ok) throw Error(response.statusText);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+        for (let i = 0; i < 5; i++) {
+            fetch(mcu_url, {
+                    method: "POST",
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+            })
+            .then((response) => {
+                if (!response.ok) throw Error(response.statusText);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        }
     };
 
     return (
