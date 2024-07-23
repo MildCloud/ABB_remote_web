@@ -15,7 +15,7 @@ function Home() {
                     mission
                 </div>
             </div> */}
-            <Monitor />
+            {/* <Monitor /> */}
             <ToggleForm />
             <ToggleButton />
         </div>
