@@ -2,8 +2,10 @@ import React from "react";
 import Monitor from "../components/Monitor";
 import ToggleButton from "../components/ToggleButton"
 import ToggleForm from "../components/ToggleForm";
+import { useState } from "react";
 
 function Home() {
+    const [status, setStatus] = useState(false);
     return (
         <div className="home">
             <div className="titleWrapper">
@@ -15,9 +17,9 @@ function Home() {
                     mission
                 </div>
             </div> */}
-            {/* <Monitor /> */}
+            <Monitor status={status}/>
             <ToggleForm />
-            <ToggleButton />
+            <ToggleButton status={status} setStatus={setStatus}/>
         </div>
     );
 }

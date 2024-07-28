@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 
-function ToggleButton(props) {
-    const [status, setStatus] = useState(false);
+function ToggleButton({status, setStatus}) {
     const text = status ? "Turn Off" : "Turn On";
 
     const handleToggle = (event) => {
@@ -14,7 +13,7 @@ function ToggleButton(props) {
         const mcu_url = "http://10.42.0.1:8080/toggle";
         const local_url = "http://localhost:8080/toggle";
         for (let i = 0; i < 5; i++) {
-            fetch(mcu_url, {
+            fetch(local_url, {
                     method: "POST",
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(data)

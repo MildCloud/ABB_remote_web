@@ -21,7 +21,7 @@ ChartJS.register(
     Legend
 );
 
-function Monitor(props) {
+function Monitor({status}) {
     const [monitorData, setMonitorData] = useState(null);
     const [chartData, setChartData] = useState({
         labels: [],
@@ -39,7 +39,7 @@ function Monitor(props) {
     const fetchData = async () => {
         const mcu_url = "http://10.42.0.1:8080/monitor";
         const local_url = "http://localhost:8080/monitor";
-        const response = await fetch(mcu_url);
+        const response = await fetch(local_url);
         const data = await response.json();
         setMonitorData(data);
         updateChartData(data.current);
@@ -70,13 +70,15 @@ function Monitor(props) {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            fetchData();
+            if (status) {
+                fetchData();
+            }
         }, 1000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [status]);
 
-    if (!monitorData || monitorData.error) {
+    if (!status || !monitorData || monitorData.error) {
         return (
             <div className="monitorTable">
                 <div className="monitorName">
