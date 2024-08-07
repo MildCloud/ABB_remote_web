@@ -13,7 +13,7 @@ function ToggleButton({status, setStatus}) {
         const mcu_url = "http://10.42.0.1:8080/toggle";
         const local_url = "http://localhost:8080/toggle";
         for (let i = 0; i < 5; i++) {
-            fetch(local_url, {
+            fetch(mcu_url, {
                     method: "POST",
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(data)
